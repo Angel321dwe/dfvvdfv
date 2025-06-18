@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Las redes sociales y su impacto</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background-color: #3b5998;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    nav {
+      background-color: #222;
+      text-align: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 700;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #8b9dc3;
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 40px;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    article {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    aside {
+      background-color: white;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    h1, h2, h3 {
+      color: #3b5998;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.9em;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #3b5998;
+      padding-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    p, ul {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 15px rgba(59, 89, 152, 0.2);
+    }
+
+    /* Recomendaciones box */
+    .recomendacion-box {
+      background-color: #eef1f5;
+      border-left: 6px solid #3b5998;
+      border-radius: 8px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      text-align: justify;
+      color: #2a3d66;
+    }
+
+    .recomendacion-box h3 {
+      margin-top: 0;
+      color: #3b5998;
+      font-size: 1.3em;
+    }
+
+    form {
+      background-color: #f9f9f9;
+      padding: 25px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border-radius: 6px;
+      border: 1px solid #bbb;
+      font-size: 1em;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #3b5998;
+      box-shadow: 0 0 5px rgba(59,89,152,0.5);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      background-color: #3b5998;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1.1em;
+      border-radius: 7px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2d4373;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 18px;
+      margin-top: 50px;
+      font-size: 0.9em;
+      letter-spacing: 0.05em;
+    }
+
+    /* Aside elements */
+    aside section {
+      margin-bottom: 30px;
+    }
+
+    aside section h3 {
+      color: #3b5998;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #3b5998;
+      padding-bottom: 4px;
+    }
+
+    aside .statistic {
+      font-weight: 700;
+      font-size: 2.4em;
+      color: #3b5998;
+      margin-bottom: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        margin-top: 40px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+      header h1 {
+  color: white;
+}
+.mensaje-enviado {
+        display: none; /* Oculto por defecto */
+        color: green;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    
+    input[type="submit"]:active + .mensaje-enviado {
+        display: block; /* Mostrar cuando se presiona el botón */
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Las redes sociales y su impacto</h1>
+    <p>Conoce sus efectos, beneficios y cómo cuidarte</p>
+  </header>
+
+  <nav>
+    <a href="#que-son">¿Qué son?</a>
+    <a href="#ventajas">Ventajas y desventajas</a>
+    <a href="#afectan">¿Cómo afectan?</a>
+    <a href="#emocional">Impacto emocional</a>
+    <a href="#recomendaciones">Recomendaciones</a>
+    <a href="#comentarios">Comentarios</a>
+  </nav>
+
+  <main>
+    <article>
+      <img src="imagenes/pic1.jpg" alt="Personas usando redes sociales" />
+
+      <section id="que-son">
+        <h2>¿Qué son las redes sociales?</h2>
+        <p>
+          Las redes sociales son plataformas digitales que permiten a los usuarios crear perfiles, conectarse con otras personas, compartir contenido (como textos, imágenes, videos, audios, enlaces) y participar en comunidades en línea. Funcionan a través de internet y pueden usarse en computadoras, tablets o teléfonos móviles.
+        </p>
+        <p>Características principales:</p>
+        <ul>
+          <li>Creación de perfiles personales o profesionales.</li>
+          <li>Interacción entre usuarios mediante mensajes, comentarios, “me gusta”, compartir publicaciones, etc.</li>
+          <li>Difusión de contenido, como textos, fotos, videos, enlaces y más.</li>
+          <li>Conexión en tiempo real, ya sea por chat, videollamadas o transmisiones en vivo.</li>
+        </ul>
+        <p>Ejemplos de redes sociales:</p>
+        <ul>
+          <li>Facebook – para compartir fotos, noticias y conectarse con amigos.</li>
+          <li>Instagram – centrada en fotos y videos.</li>
+          <li>TikTok – videos cortos y entretenimiento.</li>
+          <li>X (antes Twitter) – mensajes cortos llamados tuits.</li>
+          <li>LinkedIn – para conexiones profesionales y empleo.</li>
+        </ul>
+        <p>Usos comunes:</p>
+        <ul>
+          <li>Comunicación con amigos, familia o colegas.</li>
+          <li>Entretenimiento (memes, videos, música, etc.).</li>
+          <li>Información (noticias, eventos, tendencias).</li>
+          <li>Marketing y negocios, especialmente en cuentas de marcas o influencers.</li>
+        </ul>
+      </section>
+
+      <img src="imagenes/pic2.webp" alt="Redes sociales y conexiones digitales" />
+
+      <section id="ventajas">
+        <h2>Ventajas y desventajas</h2>
+        <h3>Ventajas:</h3>
+        <ul>
+          <li>Conectan personas de todo el mundo.</li>
+          <li>Facilitan la comunicación y el intercambio de ideas.</li>
+          <li>Ayudan en la educación y difusión de información.</li>
+          <li>Son útiles para negocios y promoción personal.</li>
+        </ul>
+        <h3>Desventajas:</h3>
+        <ul>
+          <li>Pueden generar adicción y pérdida de tiempo.</li>
+          <li>Exposición a noticias falsas o desinformación.</li>
+          <li>Aumento del ciberacoso o bullying digital.</li>
+          <li>Comparaciones que afectan la autoestima.</li>
+        </ul>
+      </section>
+
+      <section id="afectan">
+        <h2>¿Cómo afectan las redes sociales?</h2>
+        <p>
+          Las redes sociales afectan a las personas de distintas maneras, tanto de forma positiva como negativa. Por un lado, permiten comunicarse fácilmente con amigos y familiares, expresarse, conocer nuevas personas y acceder a información o contenido educativo. También ayudan a crear una imagen personal o profesional y pueden servir como espacio para compartir ideas, emociones o talentos.
+        </p>
+        <p>
+          Sin embargo, un uso excesivo o irresponsable puede tener consecuencias negativas. Muchas personas se comparan con otras en redes, lo que puede afectar su autoestima o generar ansiedad. También pueden volverse adictas a estar conectadas todo el tiempo, lo que interfiere con el estudio, el trabajo o las relaciones reales. Además, el ciberacoso, las noticias falsas y la pérdida de privacidad son problemas frecuentes.
+        </p>
+        <p>
+          En resumen, las redes sociales tienen un gran impacto en nuestras emociones, relaciones, hábitos y forma de ver el mundo, por eso es importante usarlas con equilibrio y responsabilidad.
+        </p>
+      </section>
+
+      <section id="emocional">
+           <img src="imagenes/pic4.webp" alt="Redes sociales y conexiones digitales" />
+
+        <h2>Impacto emocional y psicológico</h2>
+        <p>
+          Las redes sociales han tenido un fuerte impacto social y psicológico en la vida de las personas. A nivel social, han cambiado la forma en que nos comunicamos y nos relacionamos, facilitando el contacto con amigos, familiares y personas de todo el mundo. También han creado nuevas formas de interacción, como los “me gusta”, los comentarios y los seguidores, que muchas veces influyen en la forma en que una persona se siente aceptada o valorada por los demás.
+        </p>
+        <p>
+          Sin embargo, también pueden aislar a las personas de la convivencia real, generar conflictos y promover el ciberacoso. En el aspecto psicológico, el uso constante de redes sociales puede afectar la autoestima, causar ansiedad, estrés o incluso depresión, especialmente cuando se da mucha importancia a la apariencia, la popularidad o la aprobación de otros.
+        </p>
+        <p>
+          Muchas personas tienden a compararse con lo que ven en redes, lo que puede hacerlas sentir que su vida es menos interesante o exitosa. Aunque las redes pueden ser una herramienta positiva si se usan bien, también pueden tener efectos negativos en la salud mental y en la forma en que las personas se relacionan con los demás y consigo mismas.
+        </p>
+      </section>
+
+      <section id="recomendaciones">
+        <h2>Recomendaciones para evitar problemas</h2>
+
+        <div class="recomendacion-box">
+          <h3>🧠 1. Controla el tiempo que pasas en redes</h3>
+          <p>
+            Es importante establecer un límite diario para no volverte dependiente. Puedes usar alarmas, aplicaciones de control o simplemente ponerte horarios específicos. Evita usarlas cuando estás estudiando, comiendo o antes de dormir, ya que puede afectar tu concentración y tu descanso.
+          </p>
+        </div>
+
+        <div class="recomendacion-box">
+          <h3>🔒 2. Cuida tu privacidad</h3>
+          <p>
+            No compartas información personal como tu dirección, número de teléfono o datos de tu familia. Asegúrate de tener tus cuentas en modo privado si no quieres que desconocidos vean lo que publicas. Revisa quién puede ver tus publicaciones y evita aceptar a personas que no conoces.
+          </p>
+        </div>
+
+        <div class="recomendacion-box">
+          <h3>🧍‍♂️ 3. No te compares con los demás</h3>
+          <p>
+            Recuerda que muchas personas solo muestran lo bueno de su vida, y no todo lo que ves en redes es real. Compararte constantemente puede hacerte sentir mal sin razón. Acepta que cada persona tiene su propio ritmo y que tú también tienes cosas valiosas.
+          </p>
+        </div>
+
+        <div class="recomendacion-box">
+          <h3>💬 4. Piensa antes de publicar o comentar</h3>
+          <p>
+            Antes de subir una foto, video o comentario, pregúntate si puede dañar a alguien, si es respetuoso o si podría causarte problemas en el futuro. Recuerda que todo lo que subes puede quedarse en internet mucho tiempo, incluso si lo borras.
+          </p>
+        </div>
+
+        <div class="recomendacion-box">
+          <h3>🛑 5. Evita discusiones y conflictos en línea</h3>
+          <p>
+            Si alguien te provoca o te insulta en redes, lo mejor es no responder y bloquear. Entrar en peleas por redes sociales no vale la pena y puede empeorar la situación. Si el problema es grave, habla con un adulto de confianza o repórtalo a la plataforma.
+          </p>
+        </div>
+      </section>
+
+      
+        <section id="comentarios">
+    <h2>¿Tienes algún comentario?</h2>
+    <form action="procesar_comentarios.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensaje">Comentario:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+
+        <input type="submit" value="Enviar comentario" />
+        <p class="mensaje-enviado">¡Tu comentario ha sido enviado con éxito!</p>
+    </form>
+</section>
+
+
+    </article>
+
+    <aside>
+  <section>
+    <h3>Dato curioso</h3>
+    <p>
+      Más del 50% de la población mundial usa alguna red social, y esta cifra sigue creciendo cada año.
+    </p>
+  </section>
+
+  <section>
+    <h3>Estadística</h3>
+    <div class="statistic">72%</div>
+    <p>de los adolescentes reportan que las redes sociales afectan su autoestima.</p>
+  </section>
+
+  <section>
+    <h3>Cita</h3>
+    <blockquote>
+      “Las redes sociales son un espejo de nuestra sociedad, reflejando tanto lo mejor como lo peor de nosotros.”<br />
+      — Expertos en Psicología Digital
+    </blockquote>
+  </section>
+
+  <section>
+    <h3>Enlaces útiles</h3>
+    <ul>
+      <li><a href="https://www.who.int/es/news-room/fact-sheets/detail/mental-health-strengthening-our-response" target="_blank" rel="noopener noreferrer">OMS - Salud Mental</a></li>
+      <li><a href="https://www.commonsensemedia.org/" target="_blank" rel="noopener noreferrer">Common Sense Media</a></li>
+      <li><a href="https://www.internetsegura.gob.mx/" target="_blank" rel="noopener noreferrer">Internet Segura (México)</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Consejo rápido</h3>
+    <p>
+      Antes de compartir una publicación, tómate 10 segundos para pensar si es verdadera, útil y respetuosa. Este pequeño hábito puede marcar una gran diferencia.
+    </p>
+  </section>
+
+  <section>
+    <h3>Aplicaciones recomendadas</h3>
+    <ul>
+      <li><strong>Forest</strong> – Para reducir el tiempo en el celular.</li>
+      <li><strong>Freedom</strong> – Bloquea redes sociales temporalmente.</li>
+      <li><strong>Digital Wellbeing (Google)</strong> – Mide y controla el uso del móvil.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Frase inspiradora</h3>
+    <blockquote>
+      “Desconéctate un rato del mundo digital y conéctate contigo mismo.”<br />
+      — Anónimo
+    </blockquote>
+  </section>
+
+  <section>
+    <h3>Síntomas de uso excesivo</h3>
+    <ul>
+      <li>Irritación al no tener el teléfono cerca.</li>
+      <li>Dificultad para dormir por revisar redes.</li>
+      <li>Comparaciones constantes con otros.</li>
+      <li>Falta de concentración o motivación.</li>
+    </ul>
+  </section>
+        
+    <section>
+        <h3>Video para mas informacion</h3>
+        <video controls width="300" height="200">
+    <source src="imagenes/red.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+</video>
+         <img src="imagenes/pic3.png" alt="Redes sociales y conexiones digitales" />
+
+        
+        </section>
+</aside>
+
+  </main>
+
+  <footer>
+    © 2025 Conciencia Digital. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
